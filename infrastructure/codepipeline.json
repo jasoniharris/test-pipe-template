@@ -1,0 +1,77 @@
+{
+    "pipeline": {
+        "roleArn": "arn:aws:iam::089650354027:role/service-role/AWSCodePipelineServiceRole-eu-west-2-test-pipe-template", 
+        "stages": [
+            {
+                "name": "Source", 
+                "actions": [
+                    {
+                        "inputArtifacts": [], 
+                        "name": "Source", 
+                        "region": "eu-west-2", 
+                        "namespace": "SourceVariables", 
+                        "actionTypeId": {
+                            "category": "Source", 
+                            "owner": "AWS", 
+                            "version": "1", 
+                            "provider": "CodeStarSourceConnection"
+                        }, 
+                        "outputArtifacts": [
+                            {
+                                "name": "SourceArtifact"
+                            }
+                        ], 
+                        "configuration": {
+                            "ConnectionArn": "arn:aws:codestar-connections:eu-west-2:089650354027:connection/9120e171-7a28-496b-804c-22d7f0ba5ec2", 
+                            "FullRepositoryId": "jasoniharris/test-pipe-template", 
+                            "BranchName": "main", 
+                            "OutputArtifactFormat": "CODE_ZIP"
+                        }, 
+                        "runOrder": 1
+                    }
+                ]
+            }, 
+            {
+                "name": "Build", 
+                "actions": [
+                    {
+                        "inputArtifacts": [
+                            {
+                                "name": "SourceArtifact"
+                            }
+                        ], 
+                        "name": "Build", 
+                        "region": "eu-west-2", 
+                        "namespace": "BuildVariables", 
+                        "actionTypeId": {
+                            "category": "Build", 
+                            "owner": "AWS", 
+                            "version": "1", 
+                            "provider": "CodeBuild"
+                        }, 
+                        "outputArtifacts": [
+                            {
+                                "name": "BuildArtifact"
+                            }
+                        ], 
+                        "configuration": {
+                            "ProjectName": "test-pipe-template"
+                        }, 
+                        "runOrder": 1
+                    }
+                ]
+            }
+        ], 
+        "artifactStore": {
+            "type": "S3", 
+            "location": "codepipeline-eu-west-2-60367523907"
+        }, 
+        "name": "test-pipe-template", 
+        "version": 1
+    }, 
+    "metadata": {
+        "pipelineArn": "arn:aws:codepipeline:eu-west-2:089650354027:test-pipe-template", 
+        "updated": 1634859569.166, 
+        "created": 1634859569.166
+    }
+}
