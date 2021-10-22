@@ -19,6 +19,25 @@
         },
         "type": "@ask-cli/cfn-deployer"
       }
+    },
+    "default": {
+      "skillMetadata": {
+        "src": "./skill-package"
+      },
+      "code": {
+        "default": {
+          "src": "./lambda"
+        }
+      },
+      "skillInfrastructure": {
+        "userConfig": {
+          "runtime": "nodejs12.x",
+          "handler": "index.handler",
+          "templatePath": "./infrastructure/cfn-deployer/skill-stack.yaml",
+          "awsRegion": "eu-west-2"
+        },
+        "type": "@ask-cli/cfn-deployer"
+      }
     }
   }
 }

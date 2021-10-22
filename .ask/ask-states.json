@@ -17,5 +17,23 @@
         }
       }
     }
+  },
+    "profiles": {
+    "default": {
+      "skillId": "amzn1.ask.skill.5f0452b4-64e0-4d82-b46a-c88a28c70a39",
+      "skillInfrastructure": {
+        "@ask-cli/cfn-deployer": {
+          "deployState": {
+            "default": {
+              "s3": {
+                "bucket": "ask-src-awscreden-euwest2-1634859959011",
+                "key": "endpoint/build.zip"
+              },
+              "stackId": "arn:aws:cloudformation:eu-west-2:089650354027:stack/ask-skill-sample-nodejs-hello-world-default-skillStack-1634859959011/0b650d70-32c9-11ec-816e-06555c17ba70"
+            }
+          }
+        }
+      }
+    }
   }
 }
