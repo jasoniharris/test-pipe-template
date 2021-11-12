@@ -21,7 +21,7 @@ const HelloWorldIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'HelloWorldIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Congratulations on making it to the New Year. Tell yourself that things can only get better. The New Year brings new beginnings, so embrace opportunities to look after yourself <break time='1ms'/> and those around you.';
+        const speakOutput = 'Hello Tommy!';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
