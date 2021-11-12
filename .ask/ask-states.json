@@ -11,7 +11,7 @@
                 "bucket": "ask-src-awscreden-euwest2-1634859959011",
                 "key": "endpoint/build.zip"
               },
-              "stackId": "arn:aws:cloudformation:eu-west-2:089650354027:stack/ask-skill-sample-nodejs-hello-world-default-skillStack-1634859959011/0b650d70-32c9-11ec-816e-06555c17ba70"
+              "stackId": "arn:aws:cloudformation:eu-west-2:089650354027:stack/ask-skill-sample-nodejs-hello-world-default-skillStack-1634859959011"
             }
           }
         }
@@ -29,7 +29,7 @@
                 "bucket": "ask-src-awscreden-euwest2-1634859959011",
                 "key": "endpoint/build.zip"
               },
-              "stackId": "arn:aws:cloudformation:eu-west-2:089650354027:stack/ask-skill-sample-nodejs-hello-world-default-skillStack-1634859959011/0b650d70-32c9-11ec-816e-06555c17ba70"
+              "stackId": "arn:aws:cloudformation:eu-west-2:089650354027:stack/ask-skill-sample-nodejs-hello-world-default-skillStack-1634859959011"
             }
           }
         }
